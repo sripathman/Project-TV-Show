@@ -3,19 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
+    <title>TV Show Project</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
-
   <body>
     <div id="root">
+      <div class="episode-selector"></div>
+      <div class="search-wrapper">
+        <label for="search">Search</label>
+        <input type="search" id="search" data-search />
+        <span id="displayCount"></span>
+      </div>
+      <header>
+        <h1>TV Show Episode Explorer</h1>
+      </header>
+      <div id="episodeContainer"></div>
+      <footer>
+        Data originally from <a href="https://www.tvmaze.com/">TVMaze.com</a>.
+        Please see their
+        <a href="https://www.tvmaze.com/api#licensing">API Licensing</a> for
+        more information.
+      </footer>
     </div>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
-
-    <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
 </html>
