@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project</title>
+    <title>TV Show Explorer</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
 </head>
 <body>
     <div id="root">
         <header>
-            <h1>TV Show Episode Explorer</h1>
-            <input type="text" id="searchInput" placeholder="Search episodes..." />
-            <select id="episodeSelect">
-                <option value="">All Episodes</option>
-            </select>
-            <p id="displayCount"></p>
+            <h1>TV Show Explorer</h1>
+            <div id="navigation">
+                <button id="showListButton" style="display: none;">Back to Show List</button>
+            </div>
+            <input type="text" id="showSearchInput" placeholder="Search shows..." />
         </header>
-        <div id="episodeContainer"></div>
+        <div id="showsContainer">
+            </div>
+        <div id="episodesContainer" style="display: none;">
+            <header>
+                <h2>Episodes</h2>
+                <input type="text" id="episodeSearchInput" placeholder="Search episodes..." />
+                <select id="episodeSelect">
+                    <option value="">All Episodes</option>
+                </select>
+                <p id="displayCount"></p>
+            </header>
+            <div id="episodeList">
+                </div>
+        </div>
         <footer>
             Data originally from <a href="https://www.tvmaze.com/">TVMaze.com</a>. Please see their <a href="https://www.tvmaze.com/api#licensing">API Licensing</a> for more information.
         </footer>
     </div>
-
-    
     <script src="script.js"></script>
 </body>
 </html>
